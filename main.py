@@ -2,6 +2,8 @@ import os
 import subprocess
 from openai import OpenAI
 import json
+from dotenv import load_dotenv
+load_dotenv()
 
 API_KEY = os.getenv("API_KEY")
 TEMPERATURE = 0.5

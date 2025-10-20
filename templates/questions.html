@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Clarifying Questions</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-5">
+  <h3>Clarifying Questions</h3>
+  <pre class="bg-light p-3">{{ questions }}</pre>
+
+  <form method="POST" class="mt-4">
+    <label class="form-label">Your Answers:</label>
+    <textarea name="answers" class="form-control" rows="6" placeholder="Answer in plain text or JSON format" required></textarea>
+    <button type="submit" class="btn btn-success mt-3">Generate System Design</button>
+  </form>
+</body>
+</html>
