@@ -14,6 +14,7 @@ def ask_llm(messages, temperature=0.7):
         messages=messages,
         temperature=temperature
     )
+    print(response.choices[0].message.content)
     return response.choices[0].message.content
     
 def clarify_once(conversation):
@@ -30,8 +31,8 @@ def clarify_once(conversation):
         '{"ready": true, "summary": "<short project summary>"}\n'
         "Do not include markdown or extra text."
     )
-
     messages = [{"role": "system", "content": system_prompt}] + conversation
+    print(messages)
     raw = ask_llm(messages)
 
     cleaned = re.sub(r"^```(json)?", "", raw.strip())
